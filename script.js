@@ -37,10 +37,10 @@ function coinCalculate(input, coins, length) {
         countArr.push(count);
         console.log("coins: " + coins[j]);
         if (count > 0) {
-            var a = document.querySelector("[data-number='" + coins[j] + "']");
+            var a = document.querySelector("[data-number='" + coins[j] + "']"); // find matching coin slot
             var b = a.parentElement.getElementsByClassName('count');
             b[0].style.visibility = "visible";
-            b[0].innerHTML = count;
+            b[0].innerHTML = count; // display count on the coin
             console.log(b);
         }
         console.log("countArr: " + countArr);
@@ -55,6 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener("click", function () {
         console.log("clicked");
         getInput();
-        coins = [];
+        coins = []; // empty the array
     })
 });
